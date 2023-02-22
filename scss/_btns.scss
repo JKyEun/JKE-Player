@@ -1,0 +1,171 @@
+.btnPrev--wrap {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  padding-left: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-23vw, -50%);
+  cursor: pointer;
+  &:hover {
+    span {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    .btnPrev::before {
+      transform: rotate(-30deg);
+    }
+
+    .btnPrev::after {
+      transform: rotate(30deg);
+    }
+  }
+  .btnPrev {
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0;
+    padding-left: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      left: 0;
+      transform-origin: left center;
+      transform: rotate(-180deg);
+      transition: 0.5s;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+
+    span {
+      font-size: 18px;
+      color: #fff;
+      transition: 0.5s;
+    }
+  }
+}
+
+
+.btnNext--wrap {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  padding-right: 60px;
+  top: 50%;
+  right: 50%;
+  transform: translate(23vw, -50%);
+  cursor: pointer;
+  &:hover {
+    span {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    .btnNext::before {
+      transform: rotate(30deg);
+    }
+
+    .btnNext::after {
+      transform: rotate(-30deg);
+    }
+  }
+  .btnNext {
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0;
+    padding-right: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      right: 0;
+      transform-origin: right center;
+      transform: rotate(180deg);
+      transition: 0.5s;
+    }
+
+    &::after {
+      transform: rotate(-180deg);
+    }
+
+    span {
+      font-size: 18px;
+      color: #fff;
+      transition: 0.5s;
+    }
+  }
+}
+// .btnNext {
+//   position: absolute;
+//   display: flex;
+//   width: 60px;
+//   height: 60px;
+//   top: 50%;
+//   right: 50%;
+//   transform: translate(20vw, -50%);
+//   align-items: center;
+//   justify-content: flex-end;
+//   cursor: pointer;
+//   font-size: 0;
+//   padding-right: 20px;
+
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     width: 100%;
+//     height: 2px;
+//     background-color: #fff;
+//     left: 0;
+//     transform-origin: right center;
+//     transform: rotate(180deg);
+//     transition: 0.5s;
+//   }
+
+//   &::after {
+//     transform: rotate(-180deg);
+//   }
+
+//   &:hover {
+//     span {
+//       transform: translateX(-100%);
+//       opacity: 0;
+//     }
+
+//     &::before {
+//       transform: rotate(30deg);
+//     }
+
+//     &::after {
+//       transform: rotate(-30deg);
+//     }
+//   }
+
+//   span {
+//     font-size: 18px;
+//     color: #fff;
+//     transition: 0.5s;
+//   }
+// }

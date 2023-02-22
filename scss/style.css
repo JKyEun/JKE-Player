@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font: 16px/1 "Oswald";
+}
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(140deg, #7F7FD5, #86A8E7, #91EAE4);
+}
+figure h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 4vh;
+  left: 4vw;
+  font-size: 0;
+}
+figure h1 strong {
+  font: bold 40px/1.4 "Oswald";
+  color: #fff;
+  letter-spacing: 1px;
+}
+figure h1 span {
+  font: 16px/1 "Oswald";
+  color: #fff;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+figure .menu {
+  position: absolute;
+  top: 6vh;
+  right: 4vw;
+  font-size: 30px;
+  color: #fff;
+}
+figure section {
+  position: absolute;
+  width: 20vw;
+  height: 65vh;
+  margin-left: -10vw;
+  left: 50%;
+  top: 150%;
+  margin-left: -10vw;
+  margin-top: -32.5vh;
+}
+figure section article {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+figure section article .inner {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 5vh 2.5vw 8vh;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0.6;
+}
+figure .btnPrev--wrap {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  padding-left: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-23vw, -50%);
+  cursor: pointer;
+}
+figure .btnPrev--wrap:hover span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+figure .btnPrev--wrap:hover .btnPrev::before {
+  transform: rotate(-30deg);
+}
+figure .btnPrev--wrap:hover .btnPrev::after {
+  transform: rotate(30deg);
+}
+figure .btnPrev--wrap .btnPrev {
+  position: absolute;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0;
+  padding-left: 20px;
+}
+figure .btnPrev--wrap .btnPrev::before, figure .btnPrev--wrap .btnPrev::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  transform-origin: left center;
+  transform: rotate(-180deg);
+  transition: 0.5s;
+}
+figure .btnPrev--wrap .btnPrev::after {
+  transform: rotate(180deg);
+}
+figure .btnPrev--wrap .btnPrev span {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s;
+}
+figure .btnNext--wrap {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  padding-right: 60px;
+  top: 50%;
+  right: 50%;
+  transform: translate(23vw, -50%);
+  cursor: pointer;
+}
+figure .btnNext--wrap:hover span {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+figure .btnNext--wrap:hover .btnNext::before {
+  transform: rotate(30deg);
+}
+figure .btnNext--wrap:hover .btnNext::after {
+  transform: rotate(-30deg);
+}
+figure .btnNext--wrap .btnNext {
+  position: absolute;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0;
+  padding-right: 20px;
+}
+figure .btnNext--wrap .btnNext::before, figure .btnNext--wrap .btnNext::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  right: 0;
+  transform-origin: right center;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+figure .btnNext--wrap .btnNext::after {
+  transform: rotate(-180deg);
+}
+figure .btnNext--wrap .btnNext span {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s;
+}
+figure > p {
+  position: absolute;
+  bottom: 4vh;
+  letter-spacing: 2px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font: 16px/1 "Oswald";
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
