@@ -90,6 +90,7 @@ figure section article .inner .pic {
   width: 15vw;
   height: 15vw;
   background-size: 0;
+  transition: 1s;
 }
 figure section article .inner .pic::before, figure section article .inner .pic::after {
   content: "";
@@ -111,9 +112,19 @@ figure section article .inner .pic::before {
 }
 figure section article .inner .pic.on::before {
   animation: shadowRotation 4s linear infinite;
+  animation-play-state: running;
 }
 figure section article .inner .pic.on::after {
   animation: rotation 4s linear infinite;
+  animation-play-state: running;
+}
+figure section article .inner .pic.off::before {
+  animation: shadowRotation 4s linear infinite;
+  animation-play-state: paused;
+}
+figure section article .inner .pic.off::after {
+  animation: rotation 4s linear infinite;
+  animation-play-state: paused;
 }
 figure section article .inner .pic .dot {
   position: absolute;
@@ -130,14 +141,17 @@ figure section article .inner .pic .dot {
 figure section article .inner .text {
   position: absolute;
   width: 15vw;
+  height: 30vh;
   text-align: center;
-  margin-top: 30px;
+  line-height: 1.5;
+  margin-top: 5vh;
   letter-spacing: 1px;
 }
 figure section article .inner .text .control {
+  position: relative;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 5vh;
 }
 figure section article .inner .text .control li {
   cursor: pointer;

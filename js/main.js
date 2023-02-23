@@ -23,7 +23,6 @@ for (let i = 0; i < len; i++) {
   const audio = document.createElement("audio");
   audio.setAttribute("src", `../music/${names[i]}.mp3`);
   audio.setAttribute("loop", "loop");
-  audio.setAttribute("controls", "controls")
   articleArr[i].appendChild(audio);
 }
 
@@ -62,12 +61,16 @@ let before = 0; // 이전 패널 위치 기억 변수
 for (let el of articleArr) {
   const play = el.querySelector(".play");
   const pause = el.querySelector(".pause");
+  const reload = el.querySelector(".reload");
+  const muteOff = el.querySelector(".muteoff");
+  const muteOn = el.querySelector(".muteon");
 
   play.addEventListener("click", (e) => {
     if (before === 0) {
       before = e.target;
     } else if (before !== e.target) {
       const article = before.closest("article");
+      article.querySelector(".pic").classList.add("off");
       article.querySelector(".pic").classList.remove("on");
       article.querySelector(".play").classList.remove("hide");
       article.querySelector(".pause").classList.add("hide");
@@ -75,6 +78,7 @@ for (let el of articleArr) {
       before = e.target;
     }
     el.querySelector(".pic").classList.add("on");
+    el.querySelector(".pic").classList.remove("off");
     play.classList.add("hide");
     pause.classList.remove("hide");
     el.querySelector("audio").play();
@@ -82,8 +86,43 @@ for (let el of articleArr) {
 
   pause.addEventListener("click", () => {
     el.querySelector(".pic").classList.remove("on");
+    el.querySelector(".pic").classList.add("off");
     play.classList.remove("hide");
     pause.classList.add("hide");
     el.querySelector("audio").pause();
+
+  });
+
+  reload.addEventListener("click", (e) => {
+    if (before === 0) {
+      before = e.target;
+    } else if (before !== e.target) {
+      const article = before.closest("article");
+      article.querySelector(".pic").classList.add("off");
+      article.querySelector(".pic").classList.remove("on");
+      article.querySelector(".play").classList.remove("hide");
+      article.querySelector(".pause").classList.add("hide");
+      article.querySelector("audio").pause();
+      before = e.target;
+    }
+
+    el.querySelector(".pic").classList.add("on");
+    el.querySelector(".pic").classList.remove("off");
+    play.classList.add("hide");
+    pause.classList.remove("hide");
+    el.querySelector("audio").load();
+    el.querySelector("audio").play();
+  });
+
+  muteOff.addEventListener("click", () => {
+    muteOn.classList.remove("hide");
+    muteOff.classList.add("hide");
+    el.querySelector("audio").muted = true;
+  });
+
+  muteOn.addEventListener("click", () => {
+    muteOff.classList.remove("hide");
+    muteOn.classList.add("hide");
+    el.querySelector("audio").muted = false;
   });
 }
