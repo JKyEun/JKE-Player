@@ -141,6 +141,7 @@ figure section article .inner .text {
   position: absolute;
   width: 15vw;
   height: 30vh;
+  font-size: 14px;
   text-align: center;
   line-height: 1.5;
   margin-top: 5vh;
