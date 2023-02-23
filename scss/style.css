@@ -59,7 +59,6 @@ figure section {
   margin-left: -10vw;
   left: 50%;
   top: 150%;
-  margin-left: -10vw;
   margin-top: -32.5vh;
   transition: 0.75s;
 }
@@ -187,6 +186,29 @@ figure section article .inner p {
     transform: translate(5%, 7%) rotate(360deg);
   }
 }
+@media screen and (max-width: 800px) {
+  figure section {
+    width: 30vw;
+    margin-left: -15vw;
+    left: 50%;
+    top: 150%;
+  }
+  figure section article .inner {
+    padding: 5vh 0 8vh;
+    display: flex;
+    justify-content: center;
+  }
+  figure section article .inner .text {
+    margin-top: 13vh;
+    font-size: 14px;
+  }
+  figure section article .inner .text .control li {
+    transform: scale(1);
+  }
+  figure section article:last-child .inner .text {
+    font-size: 12px;
+  }
+}
 figure .btnPrev--wrap {
   width: 120px;
   height: 60px;
@@ -286,6 +308,22 @@ figure .btnNext--wrap .btnNext span {
   font-size: 18px;
   color: #fff;
   transition: 0.5s;
+}
+@media screen and (max-width: 800px) {
+  figure .btnPrev--wrap {
+    width: 60px;
+    padding-left: 30px;
+  }
+  figure .btnPrev--wrap .btnPrev {
+    width: 30px;
+  }
+  figure .btnNext--wrap {
+    width: 60px;
+    padding-right: 30px;
+  }
+  figure .btnNext--wrap .btnNext {
+    width: 30px;
+  }
 }
 figure > p {
   position: absolute;
