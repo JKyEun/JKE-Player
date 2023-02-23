@@ -85,7 +85,7 @@ figure .btnPrev--wrap {
   padding-left: 60px;
   top: 50%;
   left: 50%;
-  transform: translate(-23vw, -50%);
+  transform: translate(-29vw, -50%);
   cursor: pointer;
 }
 figure .btnPrev--wrap:hover span {
@@ -135,7 +135,7 @@ figure .btnNext--wrap {
   padding-right: 60px;
   top: 50%;
   right: 50%;
-  transform: translate(23vw, -50%);
+  transform: translate(29vw, -50%);
   cursor: pointer;
 }
 figure .btnNext--wrap:hover span {
